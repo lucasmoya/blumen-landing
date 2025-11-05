@@ -1,12 +1,16 @@
 {
-    "builds": [
-      { "src": "index.html", "use": "@vercel/static" }
-    ],
-    "routes": [
-      { "src": "/", "dest": "/index.html" },
-      { "src": "/habitaciones", "dest": "/rooms.html" },
-      { "src": "/entorno", "dest": "/entorno.html" },
-      { "src": "/(.*)", "dest": "/$1" }
-    ]
-  }
-  
+  "rewrites": [
+    {
+      "source": "/habitaciones",
+      "destination": "/rooms.html"
+    },
+    {
+      "source": "/entorno",
+      "destination": "/entorno.html"
+    },
+    {
+      "source": "/",
+      "destination": "/index.html"
+    }
+  ]
+}
