@@ -14,7 +14,7 @@
     function preloadImages(callback) {
         const imagePaths = [];
         for (let i = 1; i <= 6; i++) {
-            imagePaths.push(`./public/background-index/${i}.jpg`);
+            imagePaths.push(`public/background-index/${i}.jpg`);
         }
 
         let loadedCount = 0;
