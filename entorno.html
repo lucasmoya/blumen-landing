@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entorno - Hotel Blumen</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="public/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="public/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="public/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="public/apple-touch-icon.png">
+    <link rel="manifest" href="public/site.webmanifest">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        /* Entorno Section */
+        .entorno-section {
+            padding: 80px 0 60px;
+            background-color: white;
+        }
+
+        .entorno-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .entorno-header h3 {
+            font-size: 24px;
+            font-weight: 700;
+            font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .entorno-content {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .entorno-text {
+            max-width: 100%;
+        }
+
+        .entorno-text p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 24px;
+            font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+            font-weight: 400;
+        }
+
+        .entorno-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .entorno-image {
+            width: 100%;
+        }
+
+        .entorno-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        @media (min-width: 992px) {
+            .entorno-content {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+
+            .entorno-text {
+                flex: 1;
+                max-width: 60%;
+            }
+
+            .entorno-image {
+                flex: 1;
+                max-width: 40%;
+            }
+        }
+
+        /* Hero background específico para entorno - fondo fijo */
+        .hero-background-slideshow {
+            display: none !important;
+        }
+        
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('public/entorno-page.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: -2;
+        }
+
+        /* Logo y navbar en el hero - blanco como index */
+        .hero .logo img {
+            filter: brightness(0) invert(1) !important;
+        }
+
+        .hero .logo a {
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .hero .nav-links a {
+            color: white;
+        }
+
+        .hero .app-button {
+            background-color: transparent !important;
+            color: white !important;
+            border: 2px solid white !important;
+        }
+
+        .hero .app-button:hover {
+            background-color: rgba(255, 255, 255, 0.2) !important;
+            border-color: #e5e5e5 !important;
+            color: #ffffff !important;
+        }
+
+        .hero .app-button i {
+            color: white !important;
+        }
+
+        /* Título del hero con la misma tipografía de las tarjetas */
+        .hero .hero-content h1 {
+            font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Spinner -->
+    <div id="loading-spinner" class="loading-spinner">
+        <div class="spinner"></div>
+    </div>
+    
+    <div id="main-content" style="opacity: 0;">
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-overlay"></div>
+        
+        <!-- Navigation -->
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="https://i.postimg.cc/rskt76HR/blumen-mobile.png" alt="Blumen Logo">
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <a href="entorno.html">Entorno</a>
+                    <a href="rooms.html">Habitaciones</a>
+                    <a href="https://app.menuo.cl/blumenhotel" target="_blank">Café</a>
+                </div>
+                <button class="app-button" onclick="window.open('https://direct-book.com/properties/blumenhotelspadirect', '_blank')">
+                    Reservar
+                    <i class="fa-solid fa-bell-concierge"></i>
+                </button>
+            </nav>
+        </header>
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <h1>Entorno</h1>
+        </div>
+        
+        <!-- Botón Explore More -->
+        <a href="#entorno-section" class="explore-more" id="exploreMoreBtn">
+            <span>Explore más</span>
+            <div class="arrow-down">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </a>
+    </div>
+
+    <!-- Entorno Section -->
+    <div class="entorno-section" id="entorno-section">
+        <div class="container">
+            <div class="entorno-header">
+                <h3>NOSOTROS Y EL ENTORNO</h3>
+            </div>
+            <div class="entorno-content">
+                <div class="entorno-text">
+                    <p>El Hotel está ubicado en la calle las Pimpinelas 310, en el sector Costa Brava de Concón, un barrio residencial bien exclusivo, muy tranquilo. Goza de un escenario costero privilegiado. Tiene 12 habitaciones, 8 de ellas con vista al mar, piscina, jacuzzi al aire libre, sauna, sala de masajes y una preciosa cafetería con 6 mesas y bella vista al mar.</p>
+                    
+                    <p>A tan solo unos 300 metros de la costanera, se encuentra muy cercano al borde costero y a las dunas de Concón, lo que permite que los huéspedes disfruten de una atmósfera marítima envolvente. Las dunas que se extienden entre Concón y Reñaca, un espacio de gran valor paisajístico y ecológico. Las dunas desplegan una vegetación costera —arbustos y especies adaptadas al ambiente litoral— y sirven de refugio para aves marinas, siendo parte del encanto natural de la zona.</p>
+                    
+                    <p>El acceso al hotel conserva un ambiente residencial costero: calles tranquilas, edificaciones de baja altura y jardines cuidados, que complementan la sensación de calma y retiro. A corta distancia se encuentran playas como Playa Amarilla, reconocida por su arena clara y por formar parte del litoral turístico de Concón. También están muy cercanas otras playas del área: Los Lilenes (500mt), Cochoa (2.4 km) entre otras. En el entorno urbano próximo, hay plazas, restaurantes, cafés y servicios locales te permiten salir cómodamente a caminar, cenar o conocer la vida cotidiana costera. El club náutico de Concón también queda relativamente cerca (unos 700 metros, según una fuente) lo que sugiere que la zona posee un uso costero activo.</p>
+                    
+                    <p>El entorno del Hotel Blumen transmite una sensación de serenidad junto al mar. La proximidad de dunas, el sonido de las olas cercanas y la luz marina crean una atmósfera relajada, ideal para quienes buscan desconectarse. La combinación de naturaleza costera con los servicios básicos del vecindario (comercios, paseos, servicios turísticos) hace que el lugar ofrezca tanto privacidad como accesibilidad.</p>
+                </div>
+                <div class="entorno-image">
+                    <img src="public/gaviota.png" alt="Gaviota">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="https://i.postimg.cc/rskt76HR/blumen-mobile.png" alt="Blumen Logo" class="footer-logo">
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="far fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-address">
+                    <p>Las Pimpinelas 310,</p>
+                    <p>Costa Brava,</p>
+                    <p>Concón.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Legal footer section -->
+        <div class="legal-footer">
+            <div class="container">
+                <div class="legal-footer-content">
+                    <div class="legal-links">
+                        <a href="#">Términos y condiciones</a>
+                    </div>
+                    <div class="copyright">
+                        <span>Powered by</span>
+                        <img src="public/protolab-logo.png" alt="Protolab Logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+    <!-- End main-content -->
+    
+    <script>
+        // Esperar a que las fuentes y recursos carguen
+        document.fonts.ready.then(function() {
+            // Esperar un poco más para asegurar que todo esté cargado
+            setTimeout(function() {
+                const spinner = document.getElementById('loading-spinner');
+                const mainContent = document.getElementById('main-content');
+                
+                if (spinner && mainContent) {
+                    // Fade out del spinner
+                    spinner.style.opacity = '0';
+                    spinner.style.transition = 'opacity 0.5s ease-out';
+                    
+                    // Fade in del contenido
+                    mainContent.style.opacity = '1';
+                    mainContent.style.transition = 'opacity 0.5s ease-in';
+                    
+                    // Remover el spinner del DOM después de la animación
+                    setTimeout(function() {
+                        spinner.style.display = 'none';
+                    }, 500);
+                }
+            }, 300);
+        });
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+

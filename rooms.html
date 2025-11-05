@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habitaciones - Hotel Blumen</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="public/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="public/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="public/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="public/apple-touch-icon.png">
+    <link rel="manifest" href="public/site.webmanifest">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="rooms.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+    <!-- Loading Spinner -->
+    <div id="loading-spinner" class="loading-spinner">
+        <div class="spinner"></div>
+    </div>
+    
+    <div id="main-content" style="opacity: 0;">
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-overlay"></div>
+        
+        <!-- Navigation -->
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="https://i.postimg.cc/rskt76HR/blumen-mobile.png" alt="Blumen Logo">
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <a href="entorno.html">Entorno</a>
+                    <a href="rooms.html">Habitaciones</a>
+                    <a href="https://app.menuo.cl/blumenhotel" target="_blank">Café</a>
+                </div>
+                <button class="app-button" onclick="window.open('https://direct-book.com/properties/blumenhotelspadirect', '_blank')">
+                    Reservar
+                    <i class="fa-solid fa-bell-concierge"></i>
+                </button>
+            </nav>
+        </header>
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <h1>Habitaciones</h1>
+        </div>
+        
+        <!-- Botón Explore More -->
+        <a href="#rooms-section" class="explore-more" id="exploreMoreBtn">
+            <span>Explore más</span>
+            <div class="arrow-down">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </a>
+    </div>
+
+    <!-- Rooms Section -->
+    <div class="rooms-section" id="rooms-section">
+        <div class="container">
+            <div class="carousel-header">
+                <h3>HABITACIONES</h3>
+            </div>
+            <div class="carousel-container">
+                <div class="swiper" id="roomsSwiper">
+                    <div class="swiper-wrapper" id="roomsCarousel">
+                        <!-- Slides se generan por JS -->
+                    </div>
+                    <!-- Swiper navigation -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+        <!-- External navigation arrows - outside container, near page edges -->
+        <button class="external-nav-arrow external-nav-prev" id="externalPrevBtn" aria-label="Anterior">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+        </button>
+        <button class="external-nav-arrow external-nav-next" id="externalNextBtn" aria-label="Siguiente">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 18l6-6-6-6"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="https://i.postimg.cc/rskt76HR/blumen-mobile.png" alt="Blumen Logo" class="footer-logo">
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="far fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-address">
+                    <p>Las Pimpinelas 310,</p>
+                    <p>Costa Brava,</p>
+                    <p>Concón.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Legal footer section -->
+        <div class="legal-footer">
+            <div class="container">
+                <div class="legal-footer-content">
+                    <div class="legal-links">
+                        <a href="#">Términos y condiciones</a>
+                    </div>
+                    <div class="copyright">
+                        <span>Powered by</span>
+                        <img src="public/protolab-logo.png" alt="Protolab Logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    </div>
+    <!-- End main-content -->
+    
+    <script>
+        // Esperar a que las fuentes y recursos carguen
+        document.fonts.ready.then(function() {
+            // Esperar un poco más para asegurar que todo esté cargado
+            setTimeout(function() {
+                const spinner = document.getElementById('loading-spinner');
+                const mainContent = document.getElementById('main-content');
+                
+                if (spinner && mainContent) {
+                    // Fade out del spinner
+                    spinner.style.opacity = '0';
+                    spinner.style.transition = 'opacity 0.5s ease-out';
+                    
+                    // Fade in del contenido
+                    mainContent.style.opacity = '1';
+                    mainContent.style.transition = 'opacity 0.5s ease-in';
+                    
+                    // Remover el spinner del DOM después de la animación
+                    setTimeout(function() {
+                        spinner.style.display = 'none';
+                    }, 500);
+                }
+            }, 300);
+        });
+    </script>
+    
+    <script src="script.js"></script>
+    <script src="rooms.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+</html>
