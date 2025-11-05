@@ -1,0 +1,9 @@
+{
+  "name": "blumen-hotel",
+  "version": "1.0.0",
+  "description": "Blumen Hotel Website",
+  "scripts": {
+    "build": "echo 'No build step needed for static site'"
+  }
+}
+
