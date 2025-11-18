@@ -3,69 +3,63 @@ document.addEventListener('DOMContentLoaded', function() {
     const rooms = [
         {
             name: "GARDEN VIEW SUITE",
-            description: "CAMA MATRIMONIAL | KITCHENETTE | COMEDOR | BAÑO | TERRAZA",
-            details: "Dormitorio con cama matrimonial, espacio de comedor, kitchenette, baño y terraza exterior al jardín.",
+            description: "CAMA MATRIMONIAL | BAÑO PRIVADO | WIFI | CALEFACCIÓN | TV | ESTACIONAMIENTO | VISTAS AL JARDÍN | BALCÓN",
+            details: "Habitación de un ambiente con cama doble, Tv, baño en suite, una cómoda kitchenette integrada, mesa y sillas en interior, terraza con vistas a la piscina y jardines con mesa y sillas en el exterior.",
             image: "https://i.ibb.co/PZH0QP2G/IMG-2659.jpg", // Updated image URL
             features: {
-                size: "30 m² Room | 10 m² Terraza",
+                size: "25 m²",
                 capacity: 2
             },
-            price: 85000
-        },
-        {
-            name: "PARTIAL SEA VIEW SUITE",
-            description: "CAMA MATRIMONIAL | KITCHENETTE | COMEDOR | BAÑO CON TINA | BALCÓN",
-            details: "Dormitorio con cama matrimonial, kitchenette con espacio de comedor, baño con tina y balcón exterior con vista parcial al mar.",
-            image: "https://i.ibb.co/ccJPbLW2/IMG-2683.jpg", // Updated image URL
-            features: {
-                size: "32 m² Room | 8 m² Balcón",
-                capacity: 2
-            },
-            price: 95000
+            price: 210000,
+            link: "https://reservation.gofeels.com/es/room-detail/4359?CLP&token=c5e0b3c8-efe9-4cb5-b3bc-33536d76f389"
         },
         {
             name: "SUPERIOR SEA VIEW SUITE",
-            description: "CAMA MATRIMONIAL | KITCHENETTE | COMEDOR | BAÑO CON TINA | BALCÓN",
-            details: "Dormitorio con cama matrimonial, kitchenette con espacio de comedor, baño con tina y balcón exterior con vista completa al mar.",
+            description: "CAMA MATRIMONIAL | BAÑO PRIVADO | WIFI | CALEFACCIÓN | TV | ESTACIONAMIENTO | VISTA AL MAR | BALCÓN",
+            details: "Apartamento de un ambiente en segundo piso con cama doble, TV, kitchenette aparte, mesa y sillas de interior, en suite, y balcón exterior con mesa y sillas con una completa vista al mar.",
             image: "https://i.ibb.co/vvDXpjLC/IMG-2681.jpg", // Updated image URL
             features: {
-                size: "35 m² Room | 10 m² Balcón",
+                size: "22 m²",
                 capacity: 2
             },
-            price: 110000
-        },
-        {
-            name: "SEA VIEW SUITE + LIVING",
-            description: "CAMA MATRIMONIAL | SALA DE ESTAR | BAÑO | VISTA AL MAR",
-            details: "Dormitorio con cama matrimonial, una cómoda sala de estar con vista completa al mar y baño. No tiene kitchenette.",
-            image: "https://i.ibb.co/4ZjGFZ2y/IMG-2691.jpg", // Updated image URL
-            features: {
-                size: "40 m² Room",
-                capacity: 2
-            },
-            price: 110000
-        },
-        {
-            name: "SEA VIEW TWO-BEDROOM APARTMENT",
-            description: "2 DORMITORIOS | KITCHENETTE | BAÑO CON TINA | ESTAR | BALCÓN",
-            details: "Con dos dormitorios incluidos, el primero con cama matrimonial y el segundo con un camarote, más otra cama individual. Tiene kitchenette completamente equipada, baño con tina, un amplio y cómodo estar, balcón con vista al mar.",
-            image: "https://i.ibb.co/sdN47fBq/IMG-2684.jpg", // Updated image URL
-            features: {
-                size: "60 m² Room | 12 m² Balcón",
-                capacity: 5
-            },
-            price: 155000
+            price: 273001,
+            link: "https://reservation.gofeels.com/es/room-detail/4360?CLP&token=c5e0b3c8-efe9-4cb5-b3bc-33536d76f389"
         },
         {
             name: "SEA VIEW LOFT",
-            description: "CAMA MATRIMONIAL | 2 CAMAS INDIVIDUALES | KITCHENETTE | BAÑO CON TINA | BALCÓN",
-            details: "En un solo gran espacio, cuenta con una cama matrimonial y dos camas individuales. Tiene kitchenette completamente equipada, baño con tina, un amplio y cómodo estar, balcón con vista al mar.",
+            description: "CAMA MATRIMONIAL + 2 INDIVIDUAL | BAÑO PRIVADO | WIFI | CALEFACCIÓN | TV | ESTACIONAMIENTO | VISTA AL MAR | BALCÓN",
+            details: "Loft abierto con Cama doble + dos camas en espacios separados pero un solo gran ambiente con cocina completa y baño, terrazas y vista al mar.",
             image: "https://i.ibb.co/ZjPpjGQ/IMG-2663.jpg", // Updated image URL
             features: {
-                size: "55 m² Room | 10 m² Balcón",
+                size: "30 m²",
                 capacity: 4
             },
-            price: 155000
+            price: 399000,
+            link: "https://reservation.gofeels.com/es/room-detail/4361?CLP&token=c5e0b3c8-efe9-4cb5-b3bc-33536d76f389"
+        },
+        {
+            name: "SEA VIEW TWO-BEDROOM APARTMENT",
+            description: "1 CAMA MATRIMONIAL + 3 INDIVIDUAL | BAÑO PRIVADO | WIFI | CALEFACCIÓN | TV | COCINA EQUIPADA | VISTA AL MAR | BALCÓN",
+            details: "Apartamento de tres ambientes para hasta 5 personas, dos dormitor, living con TV y cocina americana. Balcón con vista al mar, con mesa y sillas de exterior.",
+            image: "https://i.ibb.co/sdN47fBq/IMG-2684.jpg", // Updated image URL
+            features: {
+                size: "45 m²",
+                capacity: 5
+            },
+            price: 399000,
+            link: "https://reservation.gofeels.com/es/room-detail/4363?CLP&token=c5e0b3c8-efe9-4cb5-b3bc-33536d76f389"
+        },
+        {
+            name: "SEA VIEW SUITE + LIVING",
+            description: "CAMA MATRIMONIAL | BAÑO PRIVADO | WIFI | CALEFACCIÓN | TV | ESTACIONAMIENTO | VISTA AL MAR | TOALLAS",
+            details: "Habitación de un ambiente, en segundo piso con cama doble, TV, frigobar, cómoda sala de estar con sofá doble, sitial, mesa y sillas de interior, con vista al mar y baño en la planta baja.",
+            image: "https://i.ibb.co/4ZjGFZ2y/IMG-2691.jpg", // Updated image URL
+            features: {
+                size: "25 m²",
+                capacity: 2
+            },
+            price: 110000,
+            link: "https://reservation.gofeels.com/es/room-detail/4367?CLP&token=c5e0b3c8-efe9-4cb5-b3bc-33536d76f389"
         }
     ];
 
@@ -99,8 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <div class="room-price">$${formattedPrice} CLP por noche</div>
                         </div>
                         <div class="room-actions">
-                            <a href="#" class="view-room-btn">VER HABITACIÓN</a>
-                            <a href="#" class="book-now-btn">RESERVAR AHORA</a>
+                            <a href="${room.link}" target="_blank" class="book-now-btn">RESERVAR AHORA</a>
                         </div>
                     </div>
                 </div>

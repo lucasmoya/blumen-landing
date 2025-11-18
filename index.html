@@ -53,7 +53,7 @@
                     <a href="rooms.html">Habitaciones</a>
                     <a href="https://app.menuo.cl/blumenhotel" target="_blank">Café</a>
                 </div>
-                <button class="app-button" onclick="window.open('https://direct-book.com/properties/blumenhotelspadirect', '_blank')">
+                <button class="app-button" onclick="window.open('https://reservation.gofeels.com/es/reservation/?token=c5e0b3c8-efe9-4cb5-b3bc-33536d76f389&rooms', '_blank')">
                     Reservar
                     <i class="fa-solid fa-bell-concierge"></i>
                 </button>
@@ -208,7 +208,7 @@
             <div class="container">
                 <div class="legal-footer-content">
                     <div class="legal-links">
-                        <a href="#">Términos y condiciones</a>
+                        <a href="#" id="politicas-link">Términos y condiciones</a>
                     </div>
                     <div class="copyright">
                         <span>Powered by</span>
@@ -238,7 +238,170 @@
     </div>
     <!-- End main-content -->
     
+    <!-- Modal de Políticas -->
+    <div id="politicas-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Políticas de propiedad</h2>
+                <button class="modal-close" id="modal-close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="politicas-content">
+                    <section class="politica-section">
+                        <h3>Consideraciones generales</h3>
+                        <div class="politica-item">
+                            <h4>Prohibición de fumar</h4>
+                            <p>No se permite fumar dentro de las habitaciones. Si desea hacerlo, consulte con administración por los espacios habilitados.</p>
+                        </div>
+                        <div class="politica-item">
+                            <h4>Mascotas</h4>
+                            <p>No se admiten animales de compañía.</p>
+                        </div>
+                        <div class="politica-item">
+                            <h4>Ruido y convivencia</h4>
+                            <p>La música, conversaciones o ruidos en terrazas están permitidos hasta las 21:00 horas. Posterior a ese horario, solicitamos mantener volumen bajo para resguardar el descanso de todos nuestros huéspedes.</p>
+                        </div>
+                        <div class="politica-item">
+                            <h4>Check-in y Check-out</h4>
+                            <ul>
+                                <li><strong>Check-in:</strong> desde las 15:00 horas.</li>
+                                <li><strong>Check-out:</strong> hasta las 12:00 horas.</li>
+                                <li>Después de las 12:00 horas se cobrará un día adicional de estadía.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section class="politica-section">
+                        <h3>Servicios y consideraciones para una estadía confortable</h3>
+                        <ul>
+                            <li>El servicio de mantención de habitaciones se realiza previo aviso a administración.</li>
+                            <li>Se entrega 1 set de toallas por persona al día.</li>
+                            <li>Las toallas del hotel son exclusivamente para uso en la ducha. Para piscina, jacuzzi o playa, el huésped debe traer sus propias toallas.</li>
+                            <li>El servicio de mucamas incluye aseo diario de habitaciones, camas y baño.</li>
+                            <li>No incluye lavado de loza, utensilios de cocina, horno ni cocina.</li>
+                            <li>Las habitaciones serán revisadas al momento del Check-out.</li>
+                            <li>Cualquier daño o pérdida ocasionado a la propiedad será cargado a la cuenta del huésped responsable.</li>
+                            <li>Servicio de lavado de ropa disponible: $18.000 por carga.</li>
+                        </ul>
+                    </section>
+
+                    <section class="politica-section">
+                        <h3>Políticas de Cancelación</h3>
+                        <ul>
+                            <li>Cancelaciones con mínimo 48 horas de anticipación: reembolso del 75% del valor abonado.</li>
+                            <li>Cancelaciones con menos de 48 horas de anticipación: no cuentan con reembolso.</li>
+                            <li>Re-agendamientos: se permiten sin costo con un mínimo de 24 horas de anticipación.</li>
+                            <li>No se realizan reembolsos si el huésped decide retirarse al llegar al hotel.</li>
+                            <li>No se realizan reembolsos si el huésped decide retirarse antes de su fecha de Check-out; deberá cancelar el saldo completo de la estadía.</li>
+                        </ul>
+                    </section>
+
+                    <section class="politica-section">
+                        <h3>Uso de Instalaciones</h3>
+                        <div class="politica-item">
+                            <h4>Sauna</h4>
+                            <p>Servicio externo al uso de la habitación. Disponible según disponibilidad.</p>
+                            <p><strong>Valores:</strong></p>
+                            <ul>
+                                <li>$15.000 por persona</li>
+                                <li>$25.000 para dos o más personas</li>
+                            </ul>
+                        </div>
+                        <div class="politica-item">
+                            <h4>Jacuzzi</h4>
+                            <p>Instalación externa incluida sin costo adicional.</p>
+                            <ul>
+                                <li><strong>Horario de uso:</strong> 18:00 a 23:00 horas</li>
+                                <li>Requiere coordinación previa con recepción.</li>
+                            </ul>
+                        </div>
+                        <div class="politica-item">
+                            <h4>Piscina</h4>
+                            <p>Instalación externa incluida sin costo adicional.</p>
+                            <p><strong>Horario de uso:</strong> 10:00 a 21:00 horas</p>
+                        </div>
+                        <div class="politica-item">
+                            <h4>Cafetería</h4>
+                            <p><strong>Horario de funcionamiento:</strong></p>
+                            <ul>
+                                <li>Lunes a viernes: 9:00 a 21:00 hrs (pausa de 13:00 a 15:00 hrs)</li>
+                                <li>Fin de semana: 9:00 a 22:30 hrs</li>
+                            </ul>
+                            <p>En caso de estar cerrada, comunicarse por WhatsApp para verificar disponibilidad.</p>
+                        </div>
+                    </section>
+
+                    <section class="politica-section">
+                        <h3>Instrucción de uso – Duchas</h3>
+                        <p>La ducha permite regular temperatura y presión moviendo la palanca bajo la regadera:</p>
+                        <ul>
+                            <li><strong>Caliente:</strong> hacia la izquierda y bajar la presión</li>
+                            <li><strong>Tibia:</strong> hacia la izquierda y subir</li>
+                            <li><strong>Fría:</strong> hacia la derecha y subir</li>
+                        </ul>
+                    </section>
+
+                    <section class="politica-section">
+                        <h3>Códigos QR disponibles</h3>
+                        <ul>
+                            <li>Wi-Fi</li>
+                            <li>Carta</li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <script>
+        // Modal de Políticas
+        document.addEventListener('DOMContentLoaded', function() {
+            const politicasLink = document.getElementById('politicas-link');
+            const politicasModal = document.getElementById('politicas-modal');
+            const modalCloseBtn = document.getElementById('modal-close-btn');
+            
+            // Función para cerrar modal con animación suave
+            function closeModal() {
+                politicasModal.classList.remove('active');
+                // Esperar a que termine la animación antes de restaurar scroll
+                setTimeout(function() {
+                    document.body.style.overflow = '';
+                }, 250); // Tiempo de la animación
+            }
+            
+            // Abrir modal
+            if (politicasLink) {
+                politicasLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    politicasModal.classList.add('active');
+                    document.body.style.overflow = 'hidden'; // Prevenir scroll del body
+                });
+            }
+            
+            // Cerrar modal con botón
+            if (modalCloseBtn) {
+                modalCloseBtn.addEventListener('click', closeModal);
+            }
+            
+            // Cerrar modal al hacer clic fuera del contenido
+            if (politicasModal) {
+                politicasModal.addEventListener('click', function(e) {
+                    if (e.target === politicasModal) {
+                        closeModal();
+                    }
+                });
+            }
+            
+            // Cerrar modal con tecla ESC
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && politicasModal.classList.contains('active')) {
+                    closeModal();
+                }
+            });
+        });
+        
         // Función para cargar imágenes y esperar a que se carguen
         function loadImages(urls) {
             return Promise.all(

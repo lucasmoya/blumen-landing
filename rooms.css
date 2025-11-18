@@ -94,6 +94,7 @@
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s, transform 0.2s;
+    margin-top: 20px;
     margin-bottom: 20px;
     border: 1px solid #eaeaea;
     pointer-events: none; /* Disable pointer events on card itself */
@@ -388,6 +389,12 @@
 .swiper-button-prev.swiper-button-disabled {
     opacity: 0.3;
     pointer-events: none;
+}
+
+.swiper-pagination {
+    padding-top: 0 !important;
+    margin-top: 40px !important;
+    position: relative !important;
 }
 
 .swiper-pagination-bullet {

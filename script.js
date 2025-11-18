@@ -1,4 +1,47 @@
 
+// Room data for carousel
+const rooms = [
+    {
+        name: "GARDEN VIEW SUITE",
+        image: "https://i.ibb.co/PZH0QP2G/IMG-2659.jpg",
+        bedrooms: 1,
+        capacity: 2,
+        price: 85000,
+        link: "https://reservation.gofeels.com/es/room-detail/4359?CLP&token=c5e0b3c8-efe9-4cb5-b3bc-33536d76f389"
+    },
+    {
+        name: "SUPERIOR SEA VIEW SUITE",
+        image: "https://i.ibb.co/vvDXpjLC/IMG-2681.jpg",
+        bedrooms: 1,
+        capacity: 2,
+        price: 110000,
+        link: "https://reservation.gofeels.com/es/room-detail/4360?CLP&token=c5e0b3c8-efe9-4cb5-b3bc-33536d76f389"
+    },
+    {
+        name: "SEA VIEW LOFT",
+        image: "https://i.ibb.co/ZjPpjGQ/IMG-2663.jpg",
+        bedrooms: 1,
+        capacity: 4,
+        price: 155000,
+        link: "https://reservation.gofeels.com/es/room-detail/4361?CLP&token=c5e0b3c8-efe9-4cb5-b3bc-33536d76f389"
+    },
+    {
+        name: "SEA VIEW TWO-BEDROOM APARTMENT",
+        image: "https://i.ibb.co/sdN47fBq/IMG-2684.jpg",
+        bedrooms: 2,
+        capacity: 5,
+        price: 155000,
+        link: "https://reservation.gofeels.com/es/room-detail/4363?CLP&token=c5e0b3c8-efe9-4cb5-b3bc-33536d76f389"
+    },
+    {
+        name: "SEA VIEW SUITE + LIVING",
+        image: "https://i.ibb.co/4ZjGFZ2y/IMG-2691.jpg",
+        bedrooms: 1,
+        capacity: 2,
+        price: 110000,
+        link: "https://reservation.gofeels.com/es/room-detail/4367?CLP&token=c5e0b3c8-efe9-4cb5-b3bc-33536d76f389"
+    }
+];
 
 // Inicializar el carrusel y configurar eventos
 document.addEventListener('DOMContentLoaded', function() {
@@ -61,6 +104,14 @@ document.addEventListener('DOMContentLoaded', function() {
             `;
             
             carousel.appendChild(roomCard);
+            
+            // Agregar event listener al botón de reservar
+            const bookButton = roomCard.querySelector('.book-button');
+            if (bookButton) {
+                bookButton.addEventListener('click', function() {
+                    window.open(room.link, '_blank');
+                });
+            }
         });
         
         // Actualizar la posición del carrusel
@@ -279,6 +330,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Function to handle the search form submission
 function handleSearch() {
+    // DISABLED: URL construction with parameters (kept for future reference)
+    /*
     // Get the dates from flatpickr
     const checkinDate = document.getElementById('checkin')._flatpickr.selectedDates[0];
     const checkoutDate = document.getElementById('checkout')._flatpickr.selectedDates[0];
@@ -300,28 +353,23 @@ function handleSearch() {
     const checkinFormatted = formatDate(checkinDate);
     const checkoutFormatted = formatDate(checkoutDate);
     
-    // Build the booking URL
-    let bookingUrl = 'https://direct-book.com/properties/blumenhotelspadirect?locale=es';
-    
-    // Add guest information
+    // Build the booking URL with parameters
+    let bookingUrl = 'https://reservation.gofeels.com/es/reservation/?token=c5e0b3c8-efe9-4cb5-b3bc-33536d76f389&rooms';
     bookingUrl += `&items[0][adults]=${adults}`;
     bookingUrl += `&items[0][children]=${children}`;
     bookingUrl += `&items[0][infants]=${babies}`;
-    
-    // Add currency
     bookingUrl += '&currency=USD';
-    
-    // Add dates if selected
     if (checkinFormatted) {
         bookingUrl += `&checkInDate=${checkinFormatted}`;
     }
-    
     if (checkoutFormatted) {
         bookingUrl += `&checkOutDate=${checkoutFormatted}`;
     }
-    
-    // Add tracking parameter
     bookingUrl += '&trackPage=yes';
+    */
+    
+    // Use direct booking link (same as header button)
+    const bookingUrl = 'https://reservation.gofeels.com/es/reservation/?token=c5e0b3c8-efe9-4cb5-b3bc-33536d76f389&rooms';
     
     // Open the booking URL in a new tab
     window.open(bookingUrl, '_blank');
