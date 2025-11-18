@@ -7,24 +7,24 @@ const config = {
   // Imágenes del hero (background-index) - máximo 1920px de ancho
   hero: {
     maxWidth: 1920,
-    quality: 80,
+    quality: 95, // Calidad alta para mantener buena calidad visual
     format: 'jpeg'
   },
   // Imágenes de página (entorno-page, habitaciones-page) - máximo 1920px
   pageHero: {
     maxWidth: 1920,
-    quality: 80,
+    quality: 95, // Calidad alta para mantener buena calidad visual
     format: 'jpeg'
   },
   // Imágenes de cards/thumbnails - máximo 800px
   cards: {
     maxWidth: 800,
-    quality: 85,
+    quality: 100, // Calidad alta para thumbnails
     format: 'jpeg'
   },
   // PNGs - mantener formato pero optimizar
   png: {
-    quality: 90,
+    quality: 100,
     compressionLevel: 9
   }
 };
