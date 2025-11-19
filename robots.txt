@@ -1,0 +1,23 @@
+# robots.txt para Blumen Hotel
+# Permite a los motores de búsqueda indexar todo el sitio
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.blumenhotel.cl/sitemap.xml
+
+# Deshabilitar acceso a archivos de sistema y backups
+Disallow: /public-backup/
+Disallow: /*.json$
+Disallow: /node_modules/
+
+# Permitir acceso a recursos públicos
+Allow: /public/
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.jpg$
+Allow: /*.png$
+Allow: /*.ico$
+Allow: /*.webmanifest$
+
