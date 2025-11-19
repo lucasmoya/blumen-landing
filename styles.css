@@ -7,15 +7,48 @@
 
 /* Screen Reader Only - Para SEO y accesibilidad */
 .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border-width: 0 !important;
+    left: -9999px !important;
+    top: -9999px !important;
+}
+
+/* Para contenedores completos ocultos, eliminar completamente el espacio sin afectar SEO */
+.seo-content-section.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border-width: 0 !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    line-height: 0 !important;
+}
+
+/* Para h2 dentro de features-section, mantener sr-only pero sin ocupar espacio */
+.features-section .sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border-width: 0 !important;
+    left: -9999px !important;
+    top: -9999px !important;
 }
 
 /* Loading Spinner */
