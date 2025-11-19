@@ -340,6 +340,11 @@
 
 .hero .nav-links a {
     color: white;
+    transition: color 0.3s;
+}
+
+.hero .nav-links a:hover {
+    color: #c49c74;
 }
 
 .hero .app-button {
@@ -367,7 +372,7 @@
     filter: none !important;
 }
 
-/* Swiper custom arrows and dots for rooms.html */
+/* Swiper custom arrows and dots for habitaciones.html */
 .swiper-button-next,
 .swiper-button-prev {
     display: none !important; /* Hide original arrows, using external ones instead */

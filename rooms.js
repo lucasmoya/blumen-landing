@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 size: "25 m²",
                 capacity: 2
             },
-            price: 210000,
+            price: 100000,
             link: "https://reservation.gofeels.com/es/room-detail/4359?CLP&token=c5e0b3c8-efe9-4cb5-b3bc-33536d76f389"
         },
         {
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 size: "22 m²",
                 capacity: 2
             },
-            price: 273001,
+            price: 125000,
             link: "https://reservation.gofeels.com/es/room-detail/4360?CLP&token=c5e0b3c8-efe9-4cb5-b3bc-33536d76f389"
         },
         {
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 size: "30 m²",
                 capacity: 4
             },
-            price: 399000,
+            price: 170000,
             link: "https://reservation.gofeels.com/es/room-detail/4361?CLP&token=c5e0b3c8-efe9-4cb5-b3bc-33536d76f389"
         },
         {
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 size: "45 m²",
                 capacity: 5
             },
-            price: 399000,
+            price: 170000,
             link: "https://reservation.gofeels.com/es/room-detail/4363?CLP&token=c5e0b3c8-efe9-4cb5-b3bc-33536d76f389"
         },
         {
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 size: "25 m²",
                 capacity: 2
             },
-            price: 110000,
+            price: 125000,
             link: "https://reservation.gofeels.com/es/room-detail/4367?CLP&token=c5e0b3c8-efe9-4cb5-b3bc-33536d76f389"
         }
     ];
